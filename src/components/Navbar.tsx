@@ -12,7 +12,7 @@ const links = [
 ];
 
 const Navbar = () => {
-  const { pathname } = useResolvedPath();
+  const { pathname } = useResolvedPath({});
 
   return (
     <nav className="sticky top-0 z-50 flex h-14 items-center justify-between bg-cyan-950 px-4 text-white shadow shadow-cyan-500/10">

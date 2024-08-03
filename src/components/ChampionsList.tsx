@@ -1,4 +1,5 @@
 import { useFetchChampions } from '../hooks/useFetchChampions';
+import { useTracker } from '../hooks/useTracker';
 import ChampionListItem from './ChampionListItem';
 import Error from './Error';
 import Loading from './Loading';
@@ -9,6 +10,7 @@ interface Props {
 
 const ChampionsList = ({ query }: Props) => {
   const { champions, error, loading, refetch } = useFetchChampions();
+  const { champions: championsWon, update } = useTracker();
 
   if (loading) {
     return <Loading />;
@@ -29,7 +31,11 @@ const ChampionsList = ({ query }: Props) => {
           key={champion.id}
           className="relative aspect-[308/400] w-1/2 max-w-[308px] overflow-hidden p-2 sm:w-1/3 md:w-1/4 lg:w-1/5"
         >
-          <ChampionListItem champion={champion} />
+          <ChampionListItem
+            champion={champion}
+            won={championsWon.has(champion.id)}
+            onClick={() => update(champion.id)}
+          />
         </div>
       ))}
     </div>
