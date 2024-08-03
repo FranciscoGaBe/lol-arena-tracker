@@ -1,9 +1,11 @@
-import ChampionsList from './components/ChampionsList';
+import { RouterProvider } from 'react-router-dom';
+
+import { router } from './utils/router';
 
 const App = () => {
   return (
     <div>
-      <ChampionsList />
+      <RouterProvider router={router} />
     </div>
   );
 };
