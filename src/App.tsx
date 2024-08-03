@@ -1,5 +1,11 @@
+import ChampionsList from './components/ChampionsList';
+
 const App = () => {
-  return <div>Lol</div>;
+  return (
+    <div>
+      <ChampionsList />
+    </div>
+  );
 };
 
 export default App;
