@@ -6,13 +6,13 @@ interface Props {
 
 const ChampionListItem = ({ champion: { id, name } }: Props) => {
   return (
-    <div className="relative size-full">
+    <div className="relative size-full border border-yellow-800">
       <img
-        className="absolute inset-0"
+        className="size-full object-cover object-top"
         src={getChampionLoadingImageUrl(id)}
         alt={name}
       />
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black to-transparent px-2 pb-2 pt-5 text-white">
+      <div className="absolute inset-x-0 bottom-0 border-t border-yellow-800 bg-black/80 p-2 text-white">
         <div className="text-xl font-bold">{name}</div>
       </div>
     </div>
