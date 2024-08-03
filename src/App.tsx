@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
+import TopButton from './components/TopButton';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       </div>
       <Navbar />
       <Outlet />
+      <TopButton />
     </>
   );
 };
