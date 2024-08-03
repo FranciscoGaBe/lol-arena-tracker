@@ -5,7 +5,7 @@ interface Output {
   champions: Set<string>;
 }
 
-const TRACKER_STORAGE_KEY = 'champions';
+export const TRACKER_STORAGE_KEY = 'champions';
 
 const getChampionsSet = (): Set<string> => {
   try {

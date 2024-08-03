@@ -37,7 +37,7 @@ const ChampionsList = () => {
           <div className="font-semibold text-yellow-400">
             {championsWon.size}
           </div>
-          <div className="text-cyan-800">/</div>
+          <div className="font-bold text-cyan-800">/</div>
           <div className="font-semibold text-cyan-600">{champions.length}</div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import { createHashRouter } from 'react-router-dom';
 
 import App from '../App';
-import About from '../pages/About';
 import Champions from '../pages/Champions';
+import HowToUse from '../pages/HowToUse';
 
 export const router = createHashRouter([
   {
@@ -14,8 +14,8 @@ export const router = createHashRouter([
         element: <Champions />,
       },
       {
-        path: '/about',
-        element: <About />,
+        path: '/how-to-use',
+        element: <HowToUse />,
       },
     ],
   },

@@ -6,8 +6,8 @@ const links = [
     title: 'Champions',
   },
   {
-    to: '/about',
-    title: 'About',
+    to: '/how-to-use',
+    title: 'How to use',
   },
 ];
 
