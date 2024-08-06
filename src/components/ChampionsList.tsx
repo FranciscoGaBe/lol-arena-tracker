@@ -2,6 +2,7 @@ import { useSearchParams } from 'react-router-dom';
 
 import { useFetchChampions } from '../hooks/useFetchChampions';
 import { useTracker } from '../hooks/useTracker';
+import ChallengeProgress from './ChallengeProgress';
 import ChampionListItem from './ChampionListItem';
 import Error from './Error';
 import Loading from './Loading';
@@ -29,18 +30,7 @@ const ChampionsList = () => {
 
   return (
     <div className="mx-auto mt-4 max-w-4xl">
-      <div className="flex items-center gap-2 px-8">
-        <div className="bg-gradient-to-tr from-cyan-600 to-yellow-400 bg-clip-text font-bold text-transparent">
-          Arena God Progress:
-        </div>
-        <div className="flex items-center gap-1">
-          <div className="font-semibold text-yellow-400">
-            {championsWon.size}
-          </div>
-          <div className="font-bold text-cyan-800">/</div>
-          <div className="font-semibold text-cyan-600">{champions.length}</div>
-        </div>
-      </div>
+      <ChallengeProgress current={championsWon.size} total={champions.length} />
       <div className="flex flex-wrap items-center p-2">
         {filteredChampions.map((champion) => (
           <div
