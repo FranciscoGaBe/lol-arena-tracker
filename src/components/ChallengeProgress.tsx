@@ -92,7 +92,7 @@ const ChallengeProgress = ({ current, total }: Props) => {
               title={tick.name}
               style={{
                 left: getFullPercentage(tick.threshold),
-                opacity: current > tick.threshold ? 1 : 0.5,
+                opacity: current >= tick.threshold ? 1 : 0.5,
               }}
             >
               <div
@@ -133,7 +133,7 @@ const ChallengeProgress = ({ current, total }: Props) => {
       </div>
       <div
         className="mt-4 flex flex-col items-center justify-center px-8"
-        style={{ opacity: getFullPercentage(current) }}
+        style={{ opacity: currentPercentage }}
       >
         {parseInt(currentPercentage, 10) >= 100 && (
           <div className="font-semibold text-cyan-600">
