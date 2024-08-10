@@ -30,7 +30,7 @@ const TopButton = () => {
   return (
     <div
       ref={ref}
-      className="pointer-events-none fixed inset-x-2 bottom-16 z-50 flex justify-end"
+      className="pointer-events-none fixed inset-x-2 bottom-2 flex justify-end"
     >
       <button
         className={`size-16 rounded-full bg-cyan-700 text-xl font-bold text-cyan-300 drop-shadow-sm transition-opacity duration-200 ${hasScrolled ? 'pointer-events-auto opacity-60' : 'opacity-0'}`}

@@ -15,7 +15,7 @@ const Navbar = () => {
   const { pathname } = useResolvedPath({});
 
   return (
-    <nav className="sticky top-0 z-50 flex h-14 items-center justify-between bg-cyan-950 px-4 text-white shadow shadow-cyan-500/10">
+    <nav className="sticky top-0 z-50 flex h-14 shrink-0 items-center justify-between bg-cyan-950 px-4 text-white shadow shadow-cyan-500/10">
       <Link to="/">LoL Arena Tracker</Link>
       <div className="flex items-center gap-4">
         {links.map(({ title, to }) => (
